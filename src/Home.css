@@ -1,0 +1,65 @@
+.heading
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.field
+{
+    height: 30px;
+    width: 350px;
+    font-size: large;
+}
+.button
+{
+    height: 35px;
+    margin-left: 10px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 10%;
+    cursor: pointer;
+}
+.records
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task
+{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: space-between;
+    background-color: black;
+    color: aliceblue;
+    height: 35px;
+    padding: 2px 5px 2px 5px;
+    margin-top: 20px;
+
+}
+
+.checkbox
+{
+    display: flex;
+    align-items: center;
+}
+.checkbox .icon
+{
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.checkbox div span {
+    margin: 0px 5px 0px 270px;
+}
+
+.task div .icon {
+    cursor: pointer;
+}
