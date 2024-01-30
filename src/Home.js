@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, { useEffect, useState } from 'react'
 import {CheckCircleFill, CircleFill, Trash3Fill} from 'react-bootstrap-icons'
 import './Home.css'
@@ -15,13 +16,25 @@ function Home() {
 
     const handleClick = () => {
         axios.post('http://localhost:3001/add', {task: task})
-        .then (result => console.log(result))
+        .then (result => {
+            location.reload();
+        })
         .catch(error=> console.log(error))
     }
     const handleEdit = (id) =>
     {
         axios.put('http://localhost:3001/update/'+ id)
-        .then (result => console.log(result))
+        .then (result => {
+            location.reload();
+        })
+        .catch(error=> console.log(error))
+    }
+    const handleDelete = (id) =>
+    {
+        axios.delete('http://localhost:3001/delete/'+ id)
+        .then (result => {
+            location.reload();
+        })
         .catch(error=> console.log(error))
     }
   return (
@@ -49,9 +62,9 @@ function Home() {
                 :
                  <CircleFill className="icon"/>
                     }
-               <p>{todo.task}</p>
+               <p className={todo.done ? "cross_line": ""}>{todo.task}</p>
                <div>
-                <span><Trash3Fill className='icon'/></span>
+                <span><Trash3Fill className='icon' onClick={()=>handleDelete(todo._id)}/></span>
                 </div>
                </div>
                 </div>

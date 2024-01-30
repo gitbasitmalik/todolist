@@ -30,6 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .task
 {
@@ -40,8 +41,7 @@
     background-color: black;
     color: aliceblue;
     height: 35px;
-    padding: 2px 5px 2px 5px;
-    margin-top: 20px;
+    margin-top: 10px;    
 
 }
 
@@ -57,9 +57,14 @@
 }
 
 .checkbox div span {
-    margin: 0px 5px 0px 270px;
+    
+    margin: 0px 0px 0px 320px;
 }
 
 .task div .icon {
     cursor: pointer;
+}
+.cross_line
+{
+    text-decoration: line-through;
 }
